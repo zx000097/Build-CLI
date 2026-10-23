@@ -77,7 +77,7 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
         run: |
-          npm run build:m365 -- --plugin-version "$VERSION" --package
+          npm run build:m365 -- --plugin-version "$VERSION" --event build-2025 --event ignite-2025 --event build-2026 --package
           cp ../out/m365-plugin-app/appPackage/build/appPackage.zip "../out/$ZIP_NAME"
 
       - name: Upload app package artifact
